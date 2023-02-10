@@ -4,6 +4,8 @@
 ## Описаие Charlar(в разработке)
 Приложение мессенджера
 
+Стенд: https://visionary-moxie-ab5e1a.netlify.app
+
 ## Ссылка на pull-request
 https://github.com/ylesandale/middle.messenger.praktikum.yandex/pull/2
 
