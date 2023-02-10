@@ -1,0 +1,27 @@
+.search-input {
+  position: relative;
+
+  &__field {
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--blackThird);
+    padding: 8px 35px;
+    outline: none;
+    border: none;
+    color: var(--whiteSecondary);
+
+    &::placeholder {
+      color: var(--whiteThird);
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: var(--blackThird);
+  }
+}

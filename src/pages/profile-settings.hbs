@@ -1,0 +1,15 @@
+{{!< profile-settings}} 
+
+<div class='profile-settings__info'>
+    {{> profile-settings-item label='Почта' value='pochta@yandex.ru'}}
+    {{> profile-settings-item label='Логин' value='ivanivanov'}}
+    {{> profile-settings-item label='Имя' value='Иван'}}
+    {{> profile-settings-item label='Фамилия' value='Иванов'}}
+    {{> profile-settings-item label='Имя в чатие' value='Иван'}}
+    {{> profile-settings-item label='Телефон' value='+7 (909) 967 30 30'}}
+</div>
+<div class='profile-settings__buttons'>
+        {{> link text='Изменить данные' href='profile-settings-change.hbs'}}
+        {{> link text='Изменить пароль' href='profile-password-change.hbs'}}
+        {{> link text='Выйти' href='/' type='red' }}
+</div>
