@@ -1,0 +1,49 @@
+.chat {
+  &__bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-input {
+    position: relative;
+    display: flex;
+    padding: 0 15px 20px;
+
+    &__controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: absolute;
+      right: 35px;
+      top: 38%;
+      transform: translate(0, -50%);
+    }
+
+    &__control-icon {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+
+      &_send {
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    &__field {
+      width: 100%;
+      border-radius: 20px;
+      background-color: var(--blackThird);
+      padding: 18px 35px;
+      outline: none;
+      border: none;
+      color: var(--whiteSecondary);
+
+      &::placeholder {
+        color: var(--whiteThird);
+      }
+    }
+  }
+}
