@@ -4,6 +4,13 @@
     justify-content: center;
     margin-bottom: 20px;
 
+    img {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        transition: var(--transition);
+    }
+
     &-container {
         width: 130px;
         height: 130px;
@@ -25,13 +32,6 @@
         position: absolute;
         transition: var(--transition);
         color: var(--whiteSecondary);
-    }
-
-    img {
-        position: relative;
-        width: 40px;
-        height: 40px;
-        transition: var(--transition);
     }
 
     &-container:hover &-hint {

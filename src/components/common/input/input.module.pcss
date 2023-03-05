@@ -5,6 +5,19 @@
     max-width: 100%;
     text-align: left;
 
+    &-label {
+        position: absolute;
+        left: 0;
+        top: 15px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: var(--grayPrimary);
+        transition: var(--transition);
+        height: fit-content;
+        pointer-events: none;
+    }
+
     &-field {
         background-color: var(--blackSecondary);
         border: none;
@@ -37,19 +50,6 @@
     &-field:not(:placeholder-shown) + &-label {
         top: 3px;
         font-size: 9px;
-    }
-
-    &-label {
-        position: absolute;
-        left: 0;
-        top: 15px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        color: var(--grayPrimary);
-        transition: var(--transition);
-        height: fit-content;
-        pointer-events: none;
     }
 
     &-error {
