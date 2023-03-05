@@ -7,7 +7,7 @@
 Стенд: https://visionary-moxie-ab5e1a.netlify.app
 
 ## Ссылка на pull-request
-https://github.com/ylesandale/middle.messenger.praktikum.yandex/pull/2
+https://github.com/ylesandale/middle.messenger.praktikum.yandex/pull/3
 
 ## Макет(будет дорабатываться)
 https://www.figma.com/file/zBhsgKdWI4lLLZHx7kvzvG/Chat_external_link-(Copy)?node-id=1%3A600&t=YWsfLGpWFthM34SD-1
