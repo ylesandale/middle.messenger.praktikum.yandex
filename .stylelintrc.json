@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "extends": ["stylelint-config-standard", "stylelint-prettier"],
   "ignoreFiles": ["dist/*", "src/styles/normalize.pcss"],
   "rules": {
     "custom-property-pattern": "^[a-z][a-zA-Z0-9]*$"
