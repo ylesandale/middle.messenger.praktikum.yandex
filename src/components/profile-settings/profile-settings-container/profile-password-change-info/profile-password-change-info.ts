@@ -5,7 +5,7 @@ import { Block, IEvents } from "utils/block";
 import validate from "utils/validate";
 import { RegEx, RegExKeys } from "consts";
 import template from "./profile-password-change-info.hbs";
-import styles from "../profile-settings-container.module.pcss";
+import * as styles from "../profile-settings-container.module.pcss";
 
 interface ProfilePasswordChangeInfoProps {
     events?: IEvents;

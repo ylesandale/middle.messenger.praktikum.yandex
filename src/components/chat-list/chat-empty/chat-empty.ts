@@ -2,7 +2,7 @@ import { Typography, TypographyType } from "components/common/typography";
 
 import { Block, IEvents } from "utils/block";
 import template from "./chat-empty.hbs";
-import styles from "./chat-empty.module.pcss";
+import * as styles from "./chat-empty.module.pcss";
 
 interface ChatEmptyProps {
     events?: IEvents;

@@ -5,7 +5,7 @@ import { MessagePosition } from "components/chat-list/chat/message/message";
 
 import { Block, IEvents } from "utils/block";
 import template from "./chat.hbs";
-import styles from "./chat.module.pcss";
+import * as styles from "./chat.module.pcss";
 
 interface ChatProps {
     events?: IEvents;

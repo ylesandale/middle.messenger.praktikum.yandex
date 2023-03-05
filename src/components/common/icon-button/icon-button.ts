@@ -2,7 +2,7 @@ import { Block, IEvents } from "utils/block";
 import { classNames } from "utils/classNames";
 import { ButtonType } from "../button";
 import template from "./icon-button.hbs";
-import styles from "./icon-button.module.pcss";
+import * as styles from "./icon-button.module.pcss";
 
 interface IconButtonProps {
     img: string;

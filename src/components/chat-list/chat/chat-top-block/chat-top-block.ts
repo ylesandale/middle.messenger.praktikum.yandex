@@ -2,7 +2,7 @@ import { Block, IEvents } from "utils/block";
 import binCircleIcon from "assets/bin-circle.svg";
 import plusCircleIcon from "assets/plus-circle.svg";
 import deleteCircleIcon from "assets/delete-circle.svg";
-import styles from "./chat-top-block.module.pcss";
+import * as styles from "./chat-top-block.module.pcss";
 import template from "./chat-top-block.hbs";
 
 interface ChatTopBlockProps {

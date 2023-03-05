@@ -4,7 +4,7 @@ import { FileInput } from "components/profile-settings/profile-settings-containe
 
 import { Block, IEvents } from "utils/block";
 import template from "./avatar-modal.hbs";
-import styles from "./avatar-modal.module.pcss";
+import * as styles from "./avatar-modal.module.pcss";
 
 interface AvatarModalProps {
     events?: IEvents;

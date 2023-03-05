@@ -1,7 +1,7 @@
 import { Block, IEvents } from "utils/block";
 import { classNames } from "utils/classNames";
 import template from "./typography.hbs";
-import styles from "./typography.module.pcss";
+import * as styles from "./typography.module.pcss";
 
 export enum TypographyType {
     bigTitle = "big-title",

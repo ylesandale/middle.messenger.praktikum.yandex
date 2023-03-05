@@ -7,7 +7,7 @@ import { Block, IEvents } from "utils/block";
 import { classNames } from "utils/classNames";
 import validate from "utils/validate";
 import template from "./registration-form.hbs";
-import styles from "./registration-form.module.pcss";
+import * as styles from "./registration-form.module.pcss";
 
 interface RegistrationFormProps {
     events?: IEvents;

@@ -4,7 +4,7 @@ import { SearchInput } from "components/chat-list/chat-list-side/search-input";
 import { Block, IEvents } from "utils/block";
 import profileIcon from "assets/profile.svg";
 import template from "./chat-list-side.hbs";
-import styles from "./chat-list-side.module.pcss";
+import * as styles from "./chat-list-side.module.pcss";
 
 interface ChatListSideProps {
     events?: IEvents;

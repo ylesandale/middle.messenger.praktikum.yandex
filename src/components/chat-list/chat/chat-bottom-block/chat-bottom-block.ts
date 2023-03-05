@@ -9,7 +9,7 @@ import { IconButton } from "components/common/icon-button";
 import { ButtonType } from "components/common/button";
 import { InputErrors } from "components/common/input";
 import { MessageInput } from "./message-input/message-input";
-import styles from "./chat-bottom-block.module.pcss";
+import * as styles from "./chat-bottom-block.module.pcss";
 import template from "./chat-bottom-block.hbs";
 
 interface ChatBottomBlockProps {

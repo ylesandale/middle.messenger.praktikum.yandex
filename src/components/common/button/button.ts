@@ -1,7 +1,7 @@
 import { Block, IEvents } from "utils/block";
 import { classNames } from "utils/classNames";
 import template from "./button.hbs";
-import styles from "./button.module.pcss";
+import * as styles from "./button.module.pcss";
 
 export enum ButtonVariant {
     primary = "primary",

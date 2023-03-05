@@ -1,7 +1,7 @@
 import { Block, IEvents } from "utils/block";
 import { classNames } from "utils/classNames";
 import template from "./chat-item.hbs";
-import styles from "./chat-item.module.pcss";
+import * as styles from "./chat-item.module.pcss";
 
 interface ChatItemProps {
     events?: IEvents;

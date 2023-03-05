@@ -1,7 +1,7 @@
 import { Block, IEvents } from "utils/block";
 import { classNames } from "utils/classNames";
 import template from "./link.hbs";
-import styles from "./link.module.pcss";
+import * as styles from "./link.module.pcss";
 
 export enum LinkType {
     red = "red",

@@ -9,7 +9,7 @@ import { SideBackButton } from "components/profile-settings/profile-settings-con
 import { AvatarModal } from "components/profile-settings/profile-settings-container/avatar-modal";
 import { ProfileSettingsChangeInfo } from "components/profile-settings/profile-settings-container/profile-settings-change-info";
 import { ProfilePasswordChangeInfo } from "components/profile-settings/profile-settings-container/profile-password-change-info";
-import styles from "./profile-settings-container.module.pcss";
+import * as styles from "./profile-settings-container.module.pcss";
 import template from "./profile-settings-container.hbs";
 
 interface IProfileSettingsContainerProps {

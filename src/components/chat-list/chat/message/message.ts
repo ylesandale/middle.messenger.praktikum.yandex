@@ -2,7 +2,7 @@ import { Block, IEvents } from "utils/block";
 import { classNames } from "utils/classNames";
 import checkIcon from "assets/check.svg";
 import template from "./message.hbs";
-import styles from "./message.module.pcss";
+import * as styles from "./message.module.pcss";
 
 export enum MessagePosition {
     left = "left",

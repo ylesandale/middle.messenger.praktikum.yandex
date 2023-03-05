@@ -1,7 +1,7 @@
 import { Block } from "utils/block";
 import { AuthorizationForm } from "components/login/authorization-form";
 import template from "./authorization.hbs";
-import styles from "../registration/registration.module.pcss";
+import * as styles from "../registration/registration.module.pcss";
 
 export class AuthorizationPage extends Block<EmptyObj> {
     constructor() {

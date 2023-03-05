@@ -1,7 +1,7 @@
 import { Block, IEvents } from "utils/block";
 import { classNames } from "utils/classNames";
 import template from "./input.hbs";
-import styles from "./input.module.pcss";
+import * as styles from "./input.module.pcss";
 
 export enum InputType {
     email = "email",

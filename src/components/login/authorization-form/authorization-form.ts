@@ -7,7 +7,7 @@ import { RegEx, RegExKeys } from "consts";
 import { Block, IEvents } from "utils/block";
 import validate from "utils/validate";
 import template from "./authorization-form.hbs";
-import styles from "./authorization-form.module.pcss";
+import * as styles from "./authorization-form.module.pcss";
 
 interface AuthorizationFormProps {
     events?: IEvents;

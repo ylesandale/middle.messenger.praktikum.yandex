@@ -1,7 +1,7 @@
 import { Block } from "utils/block";
 import { RegistrationForm } from "components/login/registration-form";
 import template from "./registration.hbs";
-import styles from "./registration.module.pcss";
+import * as styles from "./registration.module.pcss";
 
 export class RegistrationPage extends Block<EmptyObj> {
     constructor() {

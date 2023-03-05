@@ -3,7 +3,7 @@ import { Typography, TypographyType } from "components/common/typography";
 
 import { Block, IEvents } from "utils/block";
 import template from "./error-template.hbs";
-import styles from "./error-template.module.pcss";
+import * as styles from "./error-template.module.pcss";
 
 interface ErrorTemplateProps {
     events?: IEvents;

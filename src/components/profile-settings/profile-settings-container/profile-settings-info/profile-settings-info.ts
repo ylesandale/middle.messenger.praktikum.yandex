@@ -4,7 +4,7 @@ import { ProfileSettingsItem } from "components/profile-settings/profile-setting
 import { Block, IEvents } from "utils/block";
 import { InputErrors } from "components/common/input";
 import template from "./profile-settings-info.hbs";
-import styles from "../profile-settings-container.module.pcss";
+import * as styles from "../profile-settings-container.module.pcss";
 
 export enum ProfileDisplayMode {
     default = "default",

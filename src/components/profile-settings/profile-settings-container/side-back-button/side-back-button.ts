@@ -1,7 +1,7 @@
 import { Block, IEvents } from "utils/block";
 import sendIcon from "assets/send.svg";
 import template from "./side-back-button.hbs";
-import styles from "./side-back-button.module.pcss";
+import * as styles from "./side-back-button.module.pcss";
 
 interface SideBackButtonProps {
     events?: IEvents;

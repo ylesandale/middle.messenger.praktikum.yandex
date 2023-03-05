@@ -1,6 +1,6 @@
 import { Block, IEvents } from "utils/block";
 import template from "./profile-settings-item.hbs";
-import styles from "./profile-settings-item.module.pcss";
+import * as styles from "./profile-settings-item.module.pcss";
 
 interface ProfileSettingsItemProps {
     value: string;

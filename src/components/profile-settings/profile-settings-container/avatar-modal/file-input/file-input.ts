@@ -1,6 +1,6 @@
 import { Block, IEvents } from "utils/block";
 import template from "./file-input.hbs";
-import styles from "./file-input.module.pcss";
+import * as styles from "./file-input.module.pcss";
 
 interface FileInputProps {
     value: string;

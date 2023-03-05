@@ -2,7 +2,7 @@ import { Block, IEvents } from "utils/block";
 import { classNames } from "utils/classNames";
 import searchIcon from "assets/search.svg";
 import template from "./search-input.hbs";
-import styles from "./search-input.module.pcss";
+import * as styles from "./search-input.module.pcss";
 
 interface SearchInputProps {
     value: string;
