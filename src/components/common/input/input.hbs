@@ -1,0 +1,15 @@
+<div class="{{classes}}">
+    <input
+        type="{{type}}"
+        name="{{name}}"
+        placeholder="{{label}}"
+        class="{{styles.input-field}}"
+        value="{{value}}"
+    />
+    <label class="{{styles.input-label}}">
+        {{label}}
+    </label>
+    {{#if error}}
+        <span class="{{styles.input-error}}">{{error}}</span>
+    {{/if}}
+</div>

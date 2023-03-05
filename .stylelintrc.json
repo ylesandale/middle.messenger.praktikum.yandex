@@ -1,0 +1,7 @@
+{
+  "extends": "stylelint-config-standard",
+  "ignoreFiles": ["dist/*"],
+  "rules": {
+    "custom-property-pattern": "^[a-z][a-zA-Z0-9]*$"
+  }
+}

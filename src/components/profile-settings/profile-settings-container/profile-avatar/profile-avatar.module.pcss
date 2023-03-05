@@ -1,0 +1,40 @@
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    &-container {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: var(--blackFifth);
+        position: relative;
+
+        &:hover img {
+            opacity: var(--hoverOpacity);
+        }
+    }
+
+    &-hint {
+        opacity: 0;
+        position: absolute;
+        transition: var(--transition);
+        color: var(--whiteSecondary);
+    }
+
+    img {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        transition: var(--transition);
+    }
+
+    &-container:hover &-hint {
+        opacity: 1;
+    }
+}

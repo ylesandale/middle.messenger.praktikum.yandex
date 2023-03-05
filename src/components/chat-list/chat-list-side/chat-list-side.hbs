@@ -1,0 +1,15 @@
+<aside class="{{styles.chat-list}}">
+    <div class="{{styles.chat-list-top}}">
+        <a href="profile-settings.hbs" class="{{styles.chat-list-profile}}">
+            <img src="{{profileIcon}}" alt="Профиль" />
+        </a>
+        <form class="{{styles.chat-list-search-form}}">
+            {{{searchInput}}}
+        </form>
+    </div>
+    <div class="{{styles.chat-list-container}}">
+        {{#each chatItems}}
+            {{{this}}}
+        {{/each}}
+    </div>
+</aside>

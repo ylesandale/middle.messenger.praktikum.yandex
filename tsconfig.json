@@ -1,0 +1,20 @@
+{
+  "include": ["./src/"],
+  "exclude": ["dist"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "es2016",
+    "declaration": false,
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "lib": ["ESNext", "DOM"],
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<div class="{{classes}}">
+    <div class="{{styles.chat-item-avatar}}"></div>
+    <div class="{{styles.chat-item-main}}">
+        <span class="{{styles.chat-item-name}}">{{userName}}</span>
+        <span class="{{styles.chat-item-message}}">{{lastMessage}}</span>
+    </div>
+    <div class="{{styles.chat-item-info}}">
+        <span class="{{styles.chat-item-time}}">{{time}}</span>
+        {{#if isNewMessage}}
+            <div class="{{styles.chat-item-message-count}}">
+                <span>{{numberOfNewMessages}}</span>
+            </div>
+        {{/if}}
+    </div>
+</div>

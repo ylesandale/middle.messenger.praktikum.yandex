@@ -1,0 +1,20 @@
+.profile-settings-back {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    background-color: var(--blackFifth);
+    height: calc(100% - 30px);
+    padding: 15px;
+    overflow: hidden;
+
+    img {
+        cursor: pointer;
+        transform: rotate(180deg);
+        transition: var(--transition);
+
+        &:hover {
+            opacity: var(--hoverOpacity);
+        }
+    }
+}

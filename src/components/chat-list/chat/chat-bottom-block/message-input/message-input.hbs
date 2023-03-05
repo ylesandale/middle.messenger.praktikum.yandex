@@ -1,0 +1,12 @@
+<div class="{{styles.chat-input-container}}">
+    <input
+        class="{{styles.chat-input-field}}"
+        type="text"
+        placeholder="Сообщение"
+        name="{{name}}"
+        value="{{value}}"
+    />
+    {{#if error}}
+        <span class="{{styles.chat-input-error}}">{{error}}</span>
+    {{/if}}
+</div>

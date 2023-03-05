@@ -1,0 +1,29 @@
+.chat-input {
+    &-field {
+        width: 100%;
+        box-sizing: border-box;
+        background-color: var(--blackThird);
+        padding: 18px 35px;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        color: var(--whiteSecondary);
+
+        &::placeholder {
+            color: var(--whiteThird);
+        }
+    }
+
+    &-container {
+        width: 100%;
+        height: 70px;
+    }
+
+    &-error {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 400;
+        color: var(--redPrimary);
+        margin: 5px 0 0 10px;
+    }
+}
