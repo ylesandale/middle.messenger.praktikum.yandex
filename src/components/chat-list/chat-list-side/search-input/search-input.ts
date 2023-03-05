@@ -16,7 +16,9 @@ export class SearchInput extends Block<SearchInputProps> {
     }
 
     get classes(): string {
-        return classNames(styles.searchInput, {}, [this.props.className || ""]);
+        return classNames(styles["search-input"], {}, [
+            this.props.className || "",
+        ]);
     }
 
     render() {
