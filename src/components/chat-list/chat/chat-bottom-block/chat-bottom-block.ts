@@ -19,10 +19,6 @@ interface ChatBottomBlockProps {
 }
 
 export class ChatBottomBlock extends Block<ChatBottomBlockProps> {
-    constructor(props: ChatBottomBlockProps) {
-        super(props);
-    }
-
     render() {
         this.children.messageInput = new MessageInput({
             value: this.props.value,

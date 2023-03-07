@@ -18,10 +18,6 @@ interface ITypographyProps {
 }
 
 export class Typography extends Block<ITypographyProps> {
-    constructor(props: ITypographyProps) {
-        super(props);
-    }
-
     get classes(): string {
         return classNames(styles.typography, {}, [
             styles[`typography-${this.props.type}`],

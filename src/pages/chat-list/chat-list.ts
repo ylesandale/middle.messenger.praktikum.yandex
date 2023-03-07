@@ -6,10 +6,6 @@ import * as styles from "./chat-list.module.pcss";
 import template from "./chat-list.hbs";
 
 export class ChatListPage extends Block<EmptyObj> {
-    constructor() {
-        super();
-    }
-
     init() {
         this.children.chatListSide = new ChatListSide({});
 

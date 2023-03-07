@@ -18,10 +18,6 @@ interface ProfileSettingsInfoProps {
 }
 
 export class ProfileSettingsChangeInfo extends Block<ProfileSettingsInfoProps> {
-    constructor(props: ProfileSettingsInfoProps) {
-        super(props);
-    }
-
     render() {
         this.children.profileItems = [
             new Input({

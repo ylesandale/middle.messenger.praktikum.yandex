@@ -36,10 +36,6 @@ interface InputProps {
 }
 
 export class Input extends Block<InputProps> {
-    constructor(props: InputProps) {
-        super(props);
-    }
-
     get classes(): string {
         return classNames(styles.input, {}, [this.props.className || ""]);
     }

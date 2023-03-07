@@ -26,10 +26,6 @@ interface ProfileSettingsInfoProps {
 }
 
 export class ProfileSettingsInfo extends Block<ProfileSettingsInfoProps> {
-    constructor(props: ProfileSettingsInfoProps) {
-        super(props);
-    }
-
     render() {
         this.children.profileItems = [
             new ProfileSettingsItem({

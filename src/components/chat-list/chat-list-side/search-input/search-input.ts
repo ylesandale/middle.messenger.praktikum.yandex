@@ -11,10 +11,6 @@ interface SearchInputProps {
 }
 
 export class SearchInput extends Block<SearchInputProps> {
-    constructor(props: SearchInputProps) {
-        super(props);
-    }
-
     get classes(): string {
         return classNames(styles["search-input"], {}, [
             this.props.className || "",

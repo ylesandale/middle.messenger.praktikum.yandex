@@ -11,10 +11,6 @@ interface ChatTopBlockProps {
 }
 
 export class ChatTopBlock extends Block<ChatTopBlockProps> {
-    constructor(props: ChatTopBlockProps) {
-        super(props);
-    }
-
     render() {
         return this.compile(template, {
             ...this.props,

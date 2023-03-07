@@ -12,10 +12,6 @@ interface ErrorTemplateProps {
 }
 
 export class ErrorTemplate extends Block<ErrorTemplateProps> {
-    constructor(props: ErrorTemplateProps) {
-        super(props);
-    }
-
     init() {
         this.children.title = new Typography({
             tag: "h1",

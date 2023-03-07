@@ -22,10 +22,6 @@ interface RegistrationFormProps {
 }
 
 export class RegistrationForm extends Block<RegistrationFormProps> {
-    constructor(props: RegistrationFormProps) {
-        super(props);
-    }
-
     get classes(): string {
         return classNames(styles["authorization-container"], {}, [
             styles["authorization-container-extended"],

@@ -18,10 +18,6 @@ interface IProfileSettingsContainerProps {
 }
 
 export class ProfileSettingsContainer extends Block<IProfileSettingsContainerProps> {
-    constructor(props: IProfileSettingsContainerProps) {
-        super(props);
-    }
-
     render() {
         function getContent(mode: ProfileDisplayMode) {
             const profileSettingsInfo = new ProfileSettingsInfo({

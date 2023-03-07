@@ -16,10 +16,6 @@ interface ProfilePasswordChangeInfoProps {
 }
 
 export class ProfilePasswordChangeInfo extends Block<ProfilePasswordChangeInfoProps> {
-    constructor(props: ProfilePasswordChangeInfoProps) {
-        super(props);
-    }
-
     render() {
         this.children.profileItems = [
             new Input({

@@ -11,10 +11,6 @@ interface AvatarModalProps {
 }
 
 export class AvatarModal extends Block<AvatarModalProps> {
-    constructor(props: AvatarModalProps) {
-        super(props);
-    }
-
     init() {
         this.children.text = new Typography({
             tag: "p",

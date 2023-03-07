@@ -11,7 +11,7 @@ export class Block<T> {
         FLOW_CDM: "flow:component-did-mount",
         FLOW_CDU: "flow:component-did-update",
         FLOW_RENDER: "flow:render",
-    };
+    } as const;
 
     public id = nanoid(6);
 
@@ -28,7 +28,7 @@ export class Block<T> {
      *
      * @returns {void}
      */
-    constructor(propsWithChildren: any = {}) {
+    constructor(propsWithChildren: IProps<T> | object = {}) {
         const eventBus = new EventBus();
 
         const { props, children } =
@@ -44,8 +44,8 @@ export class Block<T> {
         eventBus.emit(Block.EVENTS.INIT);
     }
 
-    _getChildrenAndProps(childrenAndProps: any) {
-        const props: Record<string, any> = {};
+    _getChildrenAndProps(childrenAndProps: any): IProps<T> {
+        const props: IProps<T> | Record<string, any> = {};
         const children: Record<string, Block<T> | Block<T>[]> = {};
 
         Object.entries(childrenAndProps).forEach(([key, value]) => {
@@ -65,7 +65,7 @@ export class Block<T> {
     }
 
     _addEvents() {
-        const { events = {} as IEvents } = this.props;
+        const { events = {} } = this.props;
 
         Object.keys(events).forEach((eventName) => {
             if (eventName === "blur" || eventName === "focus") {
@@ -148,6 +148,7 @@ export class Block<T> {
     private _render() {
         const fragment = this.render();
 
+        this._removeEvents();
         const newElement = fragment.firstElementChild as HTMLElement;
 
         if (this._element) {
@@ -211,6 +212,32 @@ export class Block<T> {
         return temp.content;
     }
 
+    _removeEvents() {
+        const { events } = this.props;
+
+        if (!events || !this.element) {
+            return;
+        }
+
+        Object.entries(events).forEach(([event, listener]) => {
+            if (event === "blur" || event === "focus") {
+                if (this.element!.querySelector("input")) {
+                    this.element!.querySelector("input")?.removeEventListener(
+                        event,
+                        listener
+                    );
+                }
+                if (this.element!.querySelector("textarea")) {
+                    this.element!.querySelector(
+                        "textarea"
+                    )?.removeEventListener(event, listener);
+                }
+            } else {
+                this.element?.removeEventListener(event, listener);
+            }
+        });
+    }
+
     protected render(): DocumentFragment {
         return new DocumentFragment();
     }
@@ -219,25 +246,22 @@ export class Block<T> {
         return this.element;
     }
 
-    _makePropsProxy(props: any) {
-        // Ещё один способ передачи this, но он больше не применяется с приходом ES6+
-        const self = this;
-
+    _makePropsProxy(props: IProps<T>) {
         return new Proxy(props, {
-            get(target, prop) {
+            get: (target, prop) => {
                 const value = target[prop];
                 return typeof value === "function" ? value.bind(target) : value;
             },
-            set(target, prop, value) {
+            set: (target, prop, value) => {
                 const oldTarget = { ...target };
                 target[prop] = value;
 
                 // Запускаем обновление компоненты
                 // Плохой cloneDeep, в следующей итерации нужно заставлять добавлять cloneDeep им самим
-                self.eventBus().emit(Block.EVENTS.FLOW_CDU, oldTarget, target);
+                this.eventBus().emit(Block.EVENTS.FLOW_CDU, oldTarget, target);
                 return true;
             },
-            deleteProperty() {
+            deleteProperty: () => {
                 throw new Error("Нет доступа");
             },
         });

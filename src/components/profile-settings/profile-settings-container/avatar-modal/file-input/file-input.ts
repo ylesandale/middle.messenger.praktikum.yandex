@@ -8,10 +8,6 @@ interface FileInputProps {
 }
 
 export class FileInput extends Block<FileInputProps> {
-    constructor(props: FileInputProps) {
-        super(props);
-    }
-
     render() {
         return this.compile(template, {
             ...this.props,

@@ -8,10 +8,6 @@ interface SideBackButtonProps {
 }
 
 export class SideBackButton extends Block<SideBackButtonProps> {
-    constructor(props: SideBackButtonProps) {
-        super(props);
-    }
-
     render() {
         return this.compile(template, {
             ...this.props,

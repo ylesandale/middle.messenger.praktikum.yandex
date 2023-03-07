@@ -4,10 +4,6 @@ import template from "./registration.hbs";
 import * as styles from "./registration.module.pcss";
 
 export class RegistrationPage extends Block<EmptyObj> {
-    constructor() {
-        super();
-    }
-
     init() {
         this.children.registrationForm = new RegistrationForm({
             emailValue: "",

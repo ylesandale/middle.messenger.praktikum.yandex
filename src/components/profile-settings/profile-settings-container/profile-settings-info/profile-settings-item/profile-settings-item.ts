@@ -9,10 +9,6 @@ interface ProfileSettingsItemProps {
 }
 
 export class ProfileSettingsItem extends Block<ProfileSettingsItemProps> {
-    constructor(props: ProfileSettingsItemProps) {
-        super(props);
-    }
-
     render() {
         return this.compile(template, {
             ...this.props,

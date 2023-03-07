@@ -4,10 +4,6 @@ import { ProfileSettingsContainer } from "components/profile-settings/profile-se
 import template from "./profile-settings-change.hbs";
 
 export class ProfileSettingsChangePage extends Block<EmptyObj> {
-    constructor() {
-        super();
-    }
-
     init() {
         this.children.profileSettingsContainer = new ProfileSettingsContainer({
             displayMode: ProfileDisplayMode.edit,

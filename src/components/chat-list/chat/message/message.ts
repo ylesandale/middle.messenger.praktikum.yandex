@@ -18,10 +18,6 @@ interface MessageProps {
 }
 
 export class Message extends Block<MessageProps> {
-    constructor(props: MessageProps) {
-        super(props);
-    }
-
     get classes(): string {
         return classNames(styles.message, {}, [
             styles[`message-${this.props.position}`],

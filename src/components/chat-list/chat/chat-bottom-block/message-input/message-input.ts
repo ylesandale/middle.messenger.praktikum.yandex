@@ -12,10 +12,6 @@ interface MessageInputProps {
 }
 
 export class MessageInput extends Block<MessageInputProps> {
-    constructor(props: MessageInputProps) {
-        super(props);
-    }
-
     render() {
         return this.compile(template, {
             ...this.props,

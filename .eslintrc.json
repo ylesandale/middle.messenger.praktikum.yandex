@@ -15,7 +15,8 @@
     "@typescript-eslint/no-shadow": ["error"],
     "import/prefer-default-export": "off",
     "no-useless-constructor": "off",
-    "class-methods-use-this": "off"
+    "class-methods-use-this": "off",
+    "no-underscore-dangle": "off"
   },
   "settings": {
     "import/resolver": {

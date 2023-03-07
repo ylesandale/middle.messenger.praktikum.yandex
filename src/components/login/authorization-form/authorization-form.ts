@@ -17,10 +17,6 @@ interface AuthorizationFormProps {
 }
 
 export class AuthorizationForm extends Block<AuthorizationFormProps> {
-    constructor(props: AuthorizationFormProps) {
-        super(props);
-    }
-
     render() {
         this.children.title = new Typography({
             type: TypographyType.mediumTitle,

@@ -8,10 +8,6 @@ interface ProfileAvatarProps {
 }
 
 export class ProfileAvatar extends Block<ProfileAvatarProps> {
-    constructor(props: ProfileAvatarProps) {
-        super(props);
-    }
-
     render() {
         return this.compile(template, {
             ...this.props,

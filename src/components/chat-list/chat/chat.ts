@@ -12,10 +12,6 @@ interface ChatProps {
 }
 
 export class Chat extends Block<ChatProps> {
-    constructor(props: ChatProps) {
-        super(props);
-    }
-
     init() {
         this.children.chatTopBlock = new ChatTopBlock({ userName: "Вадим" });
         this.children.messages = [

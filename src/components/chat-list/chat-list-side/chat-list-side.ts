@@ -11,10 +11,6 @@ interface ChatListSideProps {
 }
 
 export class ChatListSide extends Block<ChatListSideProps> {
-    constructor(props: ChatListSideProps) {
-        super(props);
-    }
-
     init() {
         this.children.searchInput = new SearchInput({
             value: "",

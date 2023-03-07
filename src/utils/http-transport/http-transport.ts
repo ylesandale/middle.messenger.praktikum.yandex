@@ -1,5 +1,7 @@
 import { METHODS } from "./types";
 
+type HTTPMethod = (url: string, options?: AnyObj) => Promise<unknown>;
+
 // Самая простая версия. Реализовать штучку со всеми проверками им предстоит в конце спринта
 // Необязательный метод
 function queryStringify(data: AnyObj) {
@@ -17,20 +19,27 @@ function queryStringify(data: AnyObj) {
 }
 
 export class HTTPTransport {
-    get = (url: string, options: AnyObj = {}) =>
-        this.request(url, { ...options, method: METHODS.GET }, options.timeout);
+    get: HTTPMethod = (url, options = {}) => {
+        const { data } = options;
+        const formattedUrl = data ? `${url}${queryStringify(data)}` : url;
+        return this.request(
+            formattedUrl,
+            { ...options, method: METHODS.GET },
+            options.timeout
+        );
+    };
 
-    post = (url: string, options: AnyObj = {}) =>
+    post: HTTPMethod = (url, options = {}) =>
         this.request(
             url,
             { ...options, method: METHODS.POST },
             options.timeout
         );
 
-    put = (url: string, options: AnyObj = {}) =>
+    put: HTTPMethod = (url, options = {}) =>
         this.request(url, { ...options, method: METHODS.PUT }, options.timeout);
 
-    delete = (url: string, options: AnyObj = {}) =>
+    delete: HTTPMethod = (url, options = {}) =>
         this.request(
             url,
             {
@@ -52,10 +61,7 @@ export class HTTPTransport {
             const xhr = new XMLHttpRequest();
             const isGet = method === METHODS.GET;
 
-            xhr.open(
-                method,
-                isGet && !!data ? `${url}${queryStringify(data)}` : url
-            );
+            xhr.open(method, url);
 
             Object.keys(headers).forEach((key) => {
                 xhr.setRequestHeader(key, headers[key]);

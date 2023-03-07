@@ -18,10 +18,6 @@ interface ILinkProps {
 }
 
 export class Link extends Block<ILinkProps> {
-    constructor(props: ILinkProps) {
-        super(props);
-    }
-
     get classes(): string {
         return classNames(styles.link, {}, [
             styles[`link-${this.props.type}`],

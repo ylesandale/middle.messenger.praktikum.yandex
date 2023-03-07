@@ -4,10 +4,6 @@ import template from "./authorization.hbs";
 import * as styles from "../registration/registration.module.pcss";
 
 export class AuthorizationPage extends Block<EmptyObj> {
-    constructor() {
-        super();
-    }
-
     init() {
         this.children.authorizationForm = new AuthorizationForm({
             errors: {},

@@ -9,10 +9,6 @@ interface ChatEmptyProps {
 }
 
 export class ChatEmpty extends Block<ChatEmptyProps> {
-    constructor(props: ChatEmptyProps) {
-        super(props);
-    }
-
     init() {
         this.children.text = new Typography({
             tag: "p",
