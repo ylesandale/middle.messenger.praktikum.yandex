@@ -1,0 +1,30 @@
+.chat-list {
+    width: 25%;
+    padding: 15px 0;
+    background-color: var(--blackSecondary);
+    overflow: auto;
+
+    &-top {
+        display: flex;
+        margin-bottom: 15px;
+        padding: 0 15px;
+    }
+
+    &-profile {
+        margin: auto 20px auto 15px;
+        transition: var(--transition);
+
+        &:hover {
+            opacity: var(--hoverOpacity);
+        }
+    }
+
+    &-search-form {
+        width: 100%;
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

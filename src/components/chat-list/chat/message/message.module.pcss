@@ -1,0 +1,37 @@
+.message {
+    display: flex;
+
+    &-container {
+        position: relative;
+        padding: 12px 50px 15px 12px;
+        border-radius: 12px;
+        width: fit-content;
+        max-width: 40%;
+    }
+
+    &-right &-container {
+        background-color: var(--purpleThird);
+        border-bottom-right-radius: 0;
+        margin-left: auto;
+    }
+
+    &-left &-container {
+        border-top-left-radius: 0;
+        background-color: var(--purpleFifth);
+    }
+
+    &-text {
+        font-size: 14px;
+    }
+
+    &-right-info {
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+    }
+
+    &-time {
+        font-size: 10px;
+        color: var(--whiteThird);
+    }
+}

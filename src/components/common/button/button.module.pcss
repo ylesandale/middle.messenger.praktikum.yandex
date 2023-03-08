@@ -1,0 +1,19 @@
+.button {
+    display: inline-block;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: var(--transition);
+
+    &-primary {
+        background-color: var(--yellowPrimary);
+        color: var(--blackPrimary);
+        padding: 12px 0;
+
+        &:hover {
+            opacity: var(--hoverOpacity);
+        }
+    }
+}

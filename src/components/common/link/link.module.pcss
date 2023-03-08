@@ -1,0 +1,54 @@
+.link {
+    display: inline-block;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--whitePrimary);
+    transition: var(--transition);
+
+    &::after {
+        content: "";
+        width: 0;
+        height: 1px;
+        display: block;
+        background-color: var(--whitePrimary);
+        transition: 300ms;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &-button {
+        background-color: var(--grayThird);
+        border-radius: 20px;
+        padding: 12px 25px;
+
+        &::after {
+            display: none;
+        }
+
+        &:hover {
+            opacity: var(--hoverOpacity);
+        }
+    }
+
+    &-red {
+        color: var(--redPrimary);
+
+        &::after {
+            background-color: var(--redPrimary);
+        }
+    }
+
+    &-underline {
+        text-decoration: underline;
+
+        &::after {
+            display: none;
+        }
+
+        &:hover {
+            opacity: var(--hoverOpacity);
+        }
+    }
+}
